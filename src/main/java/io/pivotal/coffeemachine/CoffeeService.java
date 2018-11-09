@@ -82,9 +82,8 @@ public class CoffeeService {
 			} else {
 				throw new StockUnavailableException("Stock Unavailable");
 			}
-			this.menu.put(newDrink.getName(),newDrink.getCost());
-
 		}
+		this.menu.put(newDrink.getName(),newDrink.getCost());
 
 	}
 
