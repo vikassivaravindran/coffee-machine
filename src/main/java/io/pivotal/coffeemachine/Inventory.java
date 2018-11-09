@@ -16,6 +16,7 @@ public interface Inventory {
 	 *
 	 * @param name the name of the ingredient to reduce
 	 * @param amount the quantity to reduce by
+	 * @throws Exception 
 	 */
-	void deduct(String name, Integer amount);
+	void deduct(String name, Integer amount) throws Exception;
 }

@@ -18,13 +18,14 @@ public abstract class InventoryTests {
 	public void getIngredientsShouldReturnTheIngredientsInInventory() {
 		Inventory inventory = getInventory();
 		Map<String, Integer> ingredients = inventory.getIngredients();
+		System.out.println(ingredients.get("coffee"));
 		assertThat(ingredients).contains(entry("coffee", 10));
 		assertThat(ingredients).contains(entry("sugar", 10));
 		assertThat(ingredients).contains(entry("cream", 10));
 	}
 
 	@Test
-	public void deductShouldReduceQuantity() {
+	public void deductShouldReduceQuantity() throws Exception {
 		Inventory inventory = getInventory();
 		inventory.deduct("coffee", 2);
 		Map<String, Integer> ingredients = inventory.getIngredients();
