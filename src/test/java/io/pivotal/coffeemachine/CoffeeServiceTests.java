@@ -51,7 +51,7 @@ public class CoffeeServiceTests {
 		Drink d = new Drink();
 		d.setName("coca-cola");
 		d.setCost(1.90);
-		this.ingredients = new HashMap<>();
+		this.ingredients = new HashMap<String, Integer>();
 		this.ingredients.put("coffee", 1);
 		this.ingredients.put("sugar", 1);
 		this.ingredients.put("cream", 1);

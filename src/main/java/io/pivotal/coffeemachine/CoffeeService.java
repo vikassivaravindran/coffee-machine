@@ -20,7 +20,7 @@ public class CoffeeService {
 
 		Drink d = new Drink();
 		d.setName("cappuccino");
-		this.ingredients = new HashMap<>();
+		this.ingredients = new HashMap<String,Integer>();
 		this.ingredients.put("coffee", 2);
 		this.ingredients.put("sugar", 1);
 		this.ingredients.put("cream", 2);
@@ -78,7 +78,7 @@ public class CoffeeService {
 			// if Condition to check with the available number of Ingredients in
 			// Inventory
 			if (inv.containsKey(ingredient.getKey()) && inv.get(ingredient.getKey()) > ingredient.getValue()) {
-				drink.getIngredients().put(ingredient.getKey(), ingredient.getValue());
+				newIngredients.put(ingredient.getKey(), ingredient.getValue());
 			} else {
 				throw new StockUnavailableException("Stock Unavailable");
 			}
